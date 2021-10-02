@@ -141,3 +141,76 @@
 // let spliceArray = [0, 1, 2, 3];
 // spliceArray.splice(3, 1);
 // console.log(spliceArray);
+
+// array sentence manipulation
+// Buatlah sebuah fungsi untuk merubah “kalimat” menjadi multi dimensional array kalimat[kata[huruf]], tanpa menggunakan fungsi split() atau explode()
+// const stringToArray = (sentence) => {
+//     const sentenceSplitBySpace = sentence.split(" ");
+//     const result = [];
+//     for (let word of sentenceSplitBySpace) {
+//         result.push(word.split(""));
+//     }
+
+//     return result;
+// }
+// console.log(stringToArray("aaa aaa"));
+
+// Buatlah sebuah fungsi untuk memfilter jika nilai array lebih dari 5 dan lebih kecil dari sama dengan 8, serta diurutkan dari kecil ke besar dan hilangkan duplikasi.
+// numbers = [3,2,1,2,1,4,6,5,7,8,8,9,2]
+// filterNumber(numbers) //return [1,2,3,4,5,9]
+// const numbers = [3, 2, 1, 2, 1, 4, 6, 5, 7, 8, 8, 9, 2];
+// const filterNumber = (numberOfArray) => {
+//     let unique = [...new Set(numberOfArray)];
+//     unique = unique.sort();
+//     return unique.filter(number => !(number > 5 && number <= 8));
+// }
+// console.log(filterNumber(numbers));
+
+// Buatlah sebuah fungsi “sum” yang dapat dipanggil menggunakan “normal invocation function expression” dan “immediate invocation function expression”
+// sum(2,3); //normal invocation return 5 
+// sum(2)(3); //immediate invocation also return 5
+// const sum = (a, b) => {
+//     if (b === undefined) {
+//         return (c) => {
+//             return c + a;
+//         }
+//     }
+//     return a + b;
+// };
+
+// console.log(sum(1)(5));
+// console.log(sum(1, 5));
+
+// “self number” adalah bilangan yang tidak bisa diciptakan melalui metode “penjumlahan dari suatu bilangan dengan invidu angka dari suatu bilangan tersebut”.
+// Contohnya, deret “self number” dibawah 200 adalah 1, 3, 5, 7, 9, 20, 31, 42, 53, 64, 75, 86, 97, 108, 110, 121, 132, 143, 154, 165, 176, 187, 198.
+// Sedangkan, pada kasus diatas 87 bukan lah self number. Karena dapat diciptakan melalui bilangan 75, dengan penjabaran 75 + 7 + 5 = 87
+// Begitu juga 101 bukan lah self number. Karena dapat diciptakan melalui bilangan 91 atau 100. Dengan penjabaran 91 + 9 + 1 = 101 atau 100 + 1 + 0 + 0 = 101
+// Berdasarkan penjelasan diatas, buatlah sebuah fungsi yang dapat mencetak total self number dibawah 200
+// const selfNumber = () => {
+//     const arrayOfNumbers = Array.from({ length: 200 }, (_, i) => i + 1);
+//     function getSum(n) {
+//         let sum = 0;
+//         while (n != 0) {
+//             sum = sum + n % 10;
+//             n = parseInt(n / 10);
+//         }
+//         return sum;
+//     }
+
+//     function isSelfNum(n) {
+//         for (let m = 1; m <= n; m++) {
+//             if (m + getSum(m) == n)
+//                 return false;
+//         }
+//         return true;
+//     }
+//     const selfNumbers = []
+//     arrayOfNumbers.map(numb => {
+//         if (isSelfNum(numb)) {
+//             selfNumbers.push(numb)
+//         }
+//     })
+//     return selfNumbers
+// }
+
+// console.log(selfNumber());
