@@ -214,3 +214,51 @@
 // }
 
 // console.log(selfNumber());
+
+// async fetch function
+// async function getData(){
+//     const resp = await fetch("https://dev.farizdotid.com/api/daerahindonesia/provinsi");
+//     const data = await resp.json();
+//     console.log(data);
+// }
+
+// function getVocalandConsonant(statement){
+//     const oneLine = statement.replace(" ","").split("");
+//     const vocal = [];
+//     const consonant = [];
+
+//     oneLine.forEach(val => {
+//         if(val.match(/[aeiou]/gi)){
+//             vocal.push(val);
+//         }else{
+//             consonant.push(val);
+//         }
+//     });
+
+//     return { vocal, consonant };
+// }
+
+// console.log(getVocalandConsonant("aaa bab"));
+
+// function getHowManyBus(statement1, statement2, statement3) {
+//     if (statement1.length !== statement2) return "Wrong Input";
+//     const sumAllPassenger = statement1.reduce((a, b) => a + b, 0);
+//     const result = sumAllPassenger % statement3 === 0 ?
+//         sumAllPassenger / statement3
+//         :
+//         parseInt((sumAllPassenger / statement3).toString().split(".")[0]) + 1;
+//     return result;
+// }
+
+// console.log(getHowManyBus([2, 3, 2], 3, 3));
+
+// how to multiply this number in array except with this number
+// function arrayCase(statement) {
+//     const result = [];
+//     statement.forEach(val => {
+//         result.push((statement.filter(element => element !== val).reduce((a, b) => a + b, 0)) * val);
+//     });
+//     return result;
+// }
+
+// console.log(arrayCase([4, 2, 3]));
