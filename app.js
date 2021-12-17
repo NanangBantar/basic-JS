@@ -107,7 +107,7 @@
 // let mapArray = [0, 1, 2, 3].filter(val => val * 1);
 // console.log(mapArray);
 
-// join array 
+// join array
 // let joinArray = [0, 1, 2, 3].join("");
 // console.log(joinArray);
 
@@ -167,7 +167,7 @@
 // console.log(filterNumber(numbers));
 
 // Buatlah sebuah fungsi “sum” yang dapat dipanggil menggunakan “normal invocation function expression” dan “immediate invocation function expression”
-// sum(2,3); //normal invocation return 5 
+// sum(2,3); //normal invocation return 5
 // sum(2)(3); //immediate invocation also return 5
 // const sum = (a, b) => {
 //     if (b === undefined) {
@@ -252,7 +252,7 @@
 
 // console.log(getHowManyBus([2, 3, 2], 3, 3));
 
-// how to multiply this number in array except with this number
+// // how to multiply this number in array except with this number
 // function arrayCase(statement) {
 //     const result = [];
 //     statement.forEach(val => {
@@ -262,3 +262,17 @@
 // }
 
 // console.log(arrayCase([4, 2, 3]));
+
+// const getMin = [];
+// const data = [{ "gym": false, "school": true, "Store": false }, { "gym": true, "school": false, "Store": false }, { "gym": true, "school": true, "Store": false, }, { "gym": false, "school": true, "Store": false, }, { "gym": false, "school": false, "Store": true, }];
+// data.forEach(_ => {
+//     let a = 0;
+//     [_.gym, _.school, _.Store].forEach((_) => {
+//         if (_ === true) {
+//             a = a + 1;
+//         }
+//     });
+//     getMin.push(a);
+// });
+// console.log(getMin);
+// console.log("Hunian dengan jarak fasilitas minimal berada pada array urutan nomor - ", getMin.indexOf(Math.max(...getMin)));
